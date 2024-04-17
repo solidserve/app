@@ -24,7 +24,7 @@ export const removeService = async (id) => {
             where: {
                 serviceId: id
             },
-            cacheStrategy: { ttl: 20 },
+            cacheStrategy: { ttl: 10 },
         });
         return serviceRemoved;
     } catch (error) {
@@ -38,7 +38,7 @@ export const removeToken = async (id) => {
             where: {
                 tokenId: id
             },
-            cacheStrategy: { ttl: 20 },
+            cacheStrategy: { ttl: 10 },
         });
         return tokenRemoved;
     } catch (error) {
